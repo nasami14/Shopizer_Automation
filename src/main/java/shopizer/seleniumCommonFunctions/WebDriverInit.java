@@ -33,6 +33,7 @@ public class WebDriverInit {
 					//home/amir/workspace_automation/shopizer_automation/drivers/geckodriver
 					 
 					System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+config.getFirefoxDriverPath());
+
 					
 					DesiredCapabilities cap= DesiredCapabilities.firefox();
 					cap.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
@@ -42,8 +43,9 @@ public class WebDriverInit {
 				{
 					 
 					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+config.getChromeDriverPath());
-					DesiredCapabilities cap= DesiredCapabilities.chrome();
-					driver= new ChromeDriver(cap);
+					System.out.println("----------------"+System.getProperty("user.dir")+config.getChromeDriverPath())
+					//DesiredCapabilities cap= DesiredCapabilities.chrome();
+					driver= new ChromeDriver();
 				}
 				else
 				{
