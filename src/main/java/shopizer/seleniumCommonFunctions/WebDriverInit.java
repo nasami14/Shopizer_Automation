@@ -44,8 +44,8 @@ public class WebDriverInit {
 					 
 					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+config.getChromeDriverPath());
 					System.out.println("----------------"+System.getProperty("user.dir")+config.getChromeDriverPath());
-					//DesiredCapabilities cap= DesiredCapabilities.chrome();
-					driver= new ChromeDriver();
+					DesiredCapabilities cap= DesiredCapabilities.chrome();
+					driver= new ChromeDriver(cap);
 				}
 				else
 				{
