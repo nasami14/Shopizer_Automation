@@ -4,13 +4,12 @@
 	<!-- <listeners> <listener class-name=""></listener> <listener class-name=""></listener> 
 		</listeners> -->
 
-	<test verbose="2" name="LoginTest">
+	<test verbose="2" name="Login_Test">
 		<classes>
 			<class name="shopizer.PageSteps.LoginSteps" />
 		</classes>
 	</test>
 	 
-
 	<test verbose="2" name="ComputerBooksPageAllTestCases">
 		<parameter name="SortByName" value="Name"></parameter>
 		<parameter name="SortByPrice" value="Price"></parameter>
