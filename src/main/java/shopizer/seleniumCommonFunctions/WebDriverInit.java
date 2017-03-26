@@ -68,6 +68,7 @@ public class WebDriverInit {
 	public void setImplicitWait(int iSecond)
 	{
 		log.info(" Setting the implicit wait : "+iSecond +" Seconds");
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(iSecond, TimeUnit.SECONDS);
 	}
 	public void closeWebDriver()
