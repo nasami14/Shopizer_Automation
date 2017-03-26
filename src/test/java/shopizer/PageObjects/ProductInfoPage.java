@@ -28,6 +28,7 @@ public class ProductInfoPage {
 
 		readProps= new ReadPropertyFile();
 		commLocators=readProps.getLocatorMap(config.getCommonObjectFile());
+		log.info("product info page......");
 	}
 	
 	/**
@@ -36,6 +37,7 @@ public class ProductInfoPage {
 	 */
 	public void reviewItemDetailsAndAddTocart(String sItemName) throws Exception
 	{
+			log.debug(" adding the item in to cart.");
 			Actions action=  new Actions(selenium.getWebDriver());
 			action.doubleClick(selenium.getElement(commLocators.get("commonObjects.ItemInfoPage.AddToCart"))).build().perform();
 		

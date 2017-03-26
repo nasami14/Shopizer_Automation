@@ -13,6 +13,7 @@ import shopizer.PageObjects.ProductInfoPage;
 import shopizer.businessFunctions.AppFunctions;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
+import shopizer.utility.ExceptionHandler;
 
 public class OrderReviewTest
 
@@ -26,7 +27,7 @@ public class OrderReviewTest
 	AppFunctions app;
 
 	@BeforeTest
-	public void setUp() throws InterruptedException {
+	public void setUp() throws Exception {
 		selenium = new SeleniumCommon();
 		config = Config.getInstance();
 		selenium.openURL(config.getBaseURL());
@@ -60,6 +61,7 @@ public class OrderReviewTest
 		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
 		}
 	}
 	@Parameters("ItemName")
@@ -87,6 +89,7 @@ public class OrderReviewTest
 			catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				ExceptionHandler.addVerificationFailure(e);
 			}
 	}
 	@AfterTest

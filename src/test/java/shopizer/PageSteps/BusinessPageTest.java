@@ -15,6 +15,8 @@ import shopizer.PageObjects.ProductInfoPage;
 import shopizer.businessFunctions.AppFunctions;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
+import shopizer.utility.Excel_Reader;
+import shopizer.utility.ExceptionHandler;
 
 public class BusinessPageTest {
 
@@ -31,7 +33,7 @@ public class BusinessPageTest {
 	OrderConfirmationPage orderConfirm;
 	
 	@BeforeTest
-	public void setUp() throws InterruptedException
+	public void setUp() throws Exception
 	{
 		selenium= new SeleniumCommon();
 		config=Config.getInstance();
@@ -47,39 +49,50 @@ public class BusinessPageTest {
 		
 	}
 	
-	// 
+	
 	@Parameters({"DropDownName","SortByName"})
-	@Test
-	public void TC_01_Verify_Book_Search_ByName(@Optional("")String sDropDownName,@Optional("Name")String sSortByValue) {
+	@Test(enabled=true)
+	public void TC_01_Verify_Book_Search_ByName(@Optional("SORTFILTER")String sDropDownName,@Optional("Name")String sSortByValue) {
 
+		try{
+			
 		// Step1 : after login Go to computer books page
 				bbp.selectMenu("BusinessBooks");
-				
 				// Step 2: Select value from drop down
 				bbp.selectDropDownValue(sDropDownName, sSortByValue);
 				// Step 3:  Verify the sorted results
 				Assert.assertTrue(bbp.verifySortedResults("BY_NAME",null,null));
+	}catch(Exception e)
+	{
+		ExceptionHandler.addVerificationFailure(e);
+		
+	}
 				
 				
 			}
 			
 			// 
 				@Parameters({"DropDownName","SortByPrice"})
-				@Test
+				@Test(enabled=true)
 				public void TC_002_Verify_Search_ByPrice(@Optional("SORTFILTER")String sDropDownName,@Optional("Price")String sValue)
 				{
-					// Step1 : after login Go to computer books page
+					
+					try{
+						// Step1 : after login Go to computer books page
 					bbp.selectMenu("BusinessBooks");
 					// Step 2: Select value from drop down
 					bbp.selectDropDownValue(sDropDownName, sValue);
 					// Step 3:  Verify the sorted results
 					Assert.assertTrue(bbp.verifySortedResults("BY_PRICE",null,null));
+				}catch(Exception e)
+				{
+					ExceptionHandler.addVerificationFailure(e);
 					
 				}
-				
+}
 				
 				@Parameters({"DropDownName","SortByPrice","MinPrice","MaxPrice"})
-				@Test
+				@Test(enabled=true)
 				public void TC_003_Verify_Search_By_entering_min_max_price(@Optional("SORTFILTER")String sDropDownName,
 						@Optional("Price")String sValue,@Optional("15")String sMinPrice,@Optional("40")String sMaxPrice)
 				{
@@ -104,18 +117,19 @@ public class BusinessPageTest {
 				catch(Exception e)
 				{
 					e.printStackTrace();
+					ExceptionHandler.addVerificationFailure(e);
 				}	
 				
 				}
 				
 				@Parameters({"ItemName","customerId"})
-				@Test
+				@Test(enabled=true)
 				public void TC_004_Verify_ItemOrder_Completion(@Optional("The Big Switch")String sItemName,@Optional("1001")String sCustomerId)
 				{
 					
 					try
 					{
-						
+						//String[][]arrValues=Excel_Reader.getDataForTests(config.getTestDataFilePath(), "CustomerData", sCustomerId);
 					// Step1 : after login Go to computer books page
 					bbp.selectMenu("BusinessBooks");
 					Thread.sleep(12000);
@@ -132,7 +146,7 @@ public class BusinessPageTest {
 					orderReview.placeYourOrder();
 					Thread.sleep(2000);
 					//Step 6 : fill customer details and checkout the order
-					orderChkOut.fillCustomerInfo(sCustomerId);
+					orderChkOut.fillCustomerInfo(sCustomerId,"CustomerData");
 					//step 7 : verify that order is placed successfully.
 					
 					Assert.assertTrue(orderConfirm.verfiyOrder());
@@ -142,12 +156,50 @@ public class BusinessPageTest {
 				catch(Exception e)
 				{
 					e.printStackTrace();
+					ExceptionHandler.addVerificationFailure(e);
 				}	
-				
 				}
+				
+					@Parameters({"PublisherName"})
+					@Test(enabled=true)
+					public void TC_005_Verify_publisherLink(@Optional("Novells publishing")String PublisherName)
+					{
+						try {
+							// Step1 : after login Go to computer books page
+							bbp.selectMenu("BusinessBooks");
+							// Step 2: Select PublisherName
+							Assert.assertTrue(app.selectPublisher(PublisherName));
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							ExceptionHandler.addVerificationFailure(e);
+						}
+						
+					}
+				
+					
+					
+					
+					
+					@Test(enabled=true)
+					public void TC_006_Verify_AllPublisherLink()
+					{
+						try {
+							// Step1 : after login Go to computer books page
+							bbp.selectMenu("BusinessBooks");
+							// Step 2: Select PublisherName
+							Assert.assertTrue(app.selectAllPublisher());
+						} catch (Exception e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+							ExceptionHandler.addVerificationFailure(e);
+						}
+					}
+				
+				
 				@Parameters({"ItemName"})
-				@Test
-				public void TC_005_Verify_facebook_share_link(@Optional("The Big Switch")String sItemName)
+				@Test(enabled=true)
+				public void TC_007_Verify_facebook_share_link(@Optional("The Big Switch")String sItemName)
 				{
 					
 					try
@@ -160,7 +212,7 @@ public class BusinessPageTest {
 					bbp.selectItem(sItemName);
 					Thread.sleep(6000);
 					/// Step 3 : Click on facebook share link 
-					prodInfo.shareBookDetailsOnFacebook(sItemName);
+					Assert.assertTrue(prodInfo.shareBookDetailsOnFacebook("Facebook"));
 					Thread.sleep(2000);
 					
 					
@@ -168,6 +220,7 @@ public class BusinessPageTest {
 					catch(Exception e)
 					{
 						e.printStackTrace();
+						ExceptionHandler.addVerificationFailure(e);
 					}
 				}
 				@AfterTest

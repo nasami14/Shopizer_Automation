@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import shopizer.businessFunctions.AppFunctions;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
+import shopizer.utility.ExceptionHandler;
 import shopizer.utility.ReadPropertyFile;
 
 public class ComputerBooksPage {
@@ -43,6 +44,7 @@ public class ComputerBooksPage {
 		} catch (Exception e)
 		{
 			log.error("Failed to select menu : "+sMenuName);
+			ExceptionHandler.addVerificationFailure(e);
 			return false;
 		}
 		
@@ -59,6 +61,7 @@ public class ComputerBooksPage {
 		} catch (Exception e) {
 		
 			log.error(" Failed to select the value ["+sValue+"] from drop down:"+sDropDownName);
+			ExceptionHandler.addVerificationFailure(e);
 			return false;
 		}
 		
@@ -179,17 +182,23 @@ public class ComputerBooksPage {
 	public void selectItem(String sItemName)
 	{
 		
-		WebElement productContainer=selenium.getElement(compBooksLocators.get("cpBooksPage.ProductListContainer"));
-		List<WebElement>lstItems=selenium.getChildElements(productContainer,compBooksLocators.get("cpBooksPage.ItemNames"));
-		
-		for(WebElement ele:lstItems)
-		{
-			if(ele.getText().contains(sItemName))
+		try {
+			WebElement productContainer=selenium.getElement(compBooksLocators.get("cpBooksPage.ProductListContainer"));
+			List<WebElement>lstItems=selenium.getChildElements(productContainer,compBooksLocators.get("cpBooksPage.ItemNames"));
+			
+			for(WebElement ele:lstItems)
 			{
-				// if item found then click on item
-				selenium.getChildElement(productContainer, compBooksLocators.get("cpBooksPage.ItemImage").replace("#itemName#", sItemName)).click();;
-				break;
+				if(ele.getText().contains(sItemName))
+				{
+					// if item found then click on item
+					selenium.getChildElement(productContainer, compBooksLocators.get("cpBooksPage.ItemImage").replace("#itemName#", sItemName)).click();;
+					break;
+				}
 			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
 		}
 		
 	}

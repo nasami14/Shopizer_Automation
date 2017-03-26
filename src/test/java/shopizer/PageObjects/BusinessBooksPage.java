@@ -43,7 +43,7 @@ public class BusinessBooksPage {
 			return app.selectMenu(sMenuName);
 
 		} catch (Exception e) {
-			log.error("Failed to select menu : " + sMenuName);
+			log.error("Failed to select business book menu : " + sMenuName);
 			return false;
 		}
 
@@ -80,6 +80,7 @@ public class BusinessBooksPage {
 
 	public boolean verifySortedResults(String sFilterType, Double dblMinPrice, Double dblMaxPrice) {
 
+		
 		WebElement productContainer = selenium.getElement(compBooksLocators.get("cpBooksPage.ProductListContainer"));
 		boolean bSorted = false;
 		switch (sFilterType.toUpperCase()) {

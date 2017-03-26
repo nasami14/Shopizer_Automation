@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import shopizer.PageObjects.RegistrationPage;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
+import shopizer.utility.ExceptionHandler;
 
 public class RegistrationTest {
 
@@ -31,15 +32,21 @@ public class RegistrationTest {
 	{
 	
 		
-		regPage.userRegister(userName, lName, gender, country, state, userId, email, password);
+		try {
+			regPage.userRegister(userName, lName, gender, country, state, userId, email, password);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
+		}
 		
 	}
 	@DataProvider(name="newUserData")
 	public Iterator<Object[]> getInputData()
 	{
 		ArrayList<Object[]> objectList= new ArrayList<>();
-		Object[]arrValues={"amir","suleman","Male","United States","Iowa","nasami14","amir@abc.com","nasami14"};
-		//Object[]arrValues2={"Amir","Suleiman","Male","United States","Iowa","amir123","amir@abc.com","amir123"};
+		Object[]arrValues={"Gill","Sing","Male","United States","Iowa","gill16","amir@abc.com","gill16"};
+		
 		objectList.add(arrValues);
 		//objectList.add(arrValues2);
 		return objectList.iterator();

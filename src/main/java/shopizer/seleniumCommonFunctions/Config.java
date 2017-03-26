@@ -39,6 +39,10 @@ public class Config {
 	private String sDefaultUserName;
 
 	private String sBusinessBooksPageObjectFile;
+
+	private String sTestDataFilePath;
+
+	private String sScreenshotFilePath;
 	
 	private Config() 
 	{
@@ -70,6 +74,8 @@ public class Config {
 			sDefaultUserName=props.getProperty("defaultUserName");
 			sDefaultPassword=props.getProperty("defaultPassword");
 			sBusinessBooksPageObjectFile=props.getProperty("objectRepoName.BusinessBooksPage");
+			sTestDataFilePath=props.getProperty("testData.Path");
+			sScreenshotFilePath=props.getProperty("screenshot.path");
 			
 			
 		} 
@@ -98,6 +104,10 @@ public class Config {
 	public String getDefaultUserName() {
 		return sDefaultUserName;
 	}
+	public String getScreenShotsPath() {
+		return sScreenshotFilePath;
+	}
+	
 	public String getDefaultPasword() {
 		return sDefaultPassword;
 	}
@@ -107,11 +117,14 @@ public class Config {
 	public String getBrowserName() {
 		return sBrowserName;
 	}
+	public String getTestDataFilePath() {
+		return sTestDataFilePath;
+	}
 	public String getObjectRepoPath() {
 		return sObjectRepoPath;
 	}
-	public String getImplicitWait() {
-		return sImplicitWait;
+	public int getImplicitWait() {
+		return Integer.parseInt(sImplicitWait);
 	}
 	public String getExplicitWait() {
 		return sExplicitWait;

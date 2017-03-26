@@ -19,6 +19,7 @@ import shopizer.PageObjects.ProductInfoPage;
 import shopizer.businessFunctions.AppFunctions;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
+import shopizer.utility.ExceptionHandler;
 
 public class ComputerBooksPageTest 
 {
@@ -34,7 +35,7 @@ public class ComputerBooksPageTest
 	AppFunctions app;
 	
 	@BeforeTest
-	public void setUp() throws InterruptedException
+	public void setUp() throws Exception
 	{
 		selenium= new SeleniumCommon();
 		config=Config.getInstance();
@@ -55,13 +56,19 @@ public class ComputerBooksPageTest
 	@Test
 	public void TC_001_Verify_Search_ByName(@Optional("SORTFILTER")String sDropDownName,@Optional("Name")String sValue)
 	{
-		// Step1 : after login Go to computer books page
-		cbp.selectMenu("ComputerBooks");
-		
-		// Step 2: Select value from drop down
-		cbp.selectDropDownValue(sDropDownName, sValue);
-		// Step 3:  Verify the sorted results
-		Assert.assertTrue(cbp.verifySortedResults("BY_NAME",null,null));
+		try {
+			// Step1 : after login Go to computer books page
+			cbp.selectMenu("ComputerBooks");
+			
+			// Step 2: Select value from drop down
+			cbp.selectDropDownValue(sDropDownName, sValue);
+			// Step 3:  Verify the sorted results
+			Assert.assertTrue(cbp.verifySortedResults("BY_NAME",null,null));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
+		}
 		
 		
 	}
@@ -71,12 +78,18 @@ public class ComputerBooksPageTest
 		@Test
 		public void TC_002_Verify_Search_ByPrice(@Optional("SORTFILTER")String sDropDownName,@Optional("Price")String sValue)
 		{
-			// Step1 : after login Go to computer books page
-			cbp.selectMenu("ComputerBooks");
-			// Step 2: Select value from drop down
-			cbp.selectDropDownValue(sDropDownName, sValue);
-			// Step 3:  Verify the sorted results
-			Assert.assertTrue(cbp.verifySortedResults("BY_PRICE",null,null));
+			try {
+				// Step1 : after login Go to computer books page
+				cbp.selectMenu("ComputerBooks");
+				// Step 2: Select value from drop down
+				cbp.selectDropDownValue(sDropDownName, sValue);
+				// Step 3:  Verify the sorted results
+				Assert.assertTrue(cbp.verifySortedResults("BY_PRICE",null,null));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				ExceptionHandler.addVerificationFailure(e);
+			}
 			
 		}
 		
@@ -107,6 +120,7 @@ public class ComputerBooksPageTest
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
 		}	
 		
 		}
@@ -135,7 +149,7 @@ public class ComputerBooksPageTest
 			orderReview.placeYourOrder();
 			Thread.sleep(2000);
 			//Step 6 : fill customer details and checkout the order
-			orderChkOut.fillCustomerInfo(sCustomerId);
+			orderChkOut.fillCustomerInfo(sCustomerId,"CustomerData");
 			//step 7 : verify that order is placed successfully.
 			
 			Assert.assertTrue(orderConfirm.verfiyOrder());
@@ -145,6 +159,7 @@ public class ComputerBooksPageTest
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			ExceptionHandler.addVerificationFailure(e);
 		}	
 		
 		}
@@ -159,14 +174,19 @@ public class ComputerBooksPageTest
 			
 		}
 		
-		@Parameters({"PublisherName"})
 		@Test
-		public void TC_006_Verify_AllPublisherLink(@Optional("Sams")String PublisherName)
+		public void TC_006_Verify_AllPublisherLink()
 		{
-			// Step1 : after login Go to computer books page
-			cbp.selectMenu("ComputerBooks");
-			// Step 2: Select PublisherName
-			Assert.assertTrue(app.selectAllPublisher());
+			try {
+				// Step1 : after login Go to computer books page
+				cbp.selectMenu("ComputerBooks");
+				// Step 2: Select PublisherName
+				Assert.assertTrue(app.selectAllPublisher());
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				ExceptionHandler.addVerificationFailure(e);
+			}
 			
 		}
 		

@@ -1,10 +1,16 @@
 package shopizer.businessFunctions;
 
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.TreeMap;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Mouse;
 
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
@@ -41,6 +47,7 @@ public class AppFunctions
 		commLocators=readProps.getLocatorMap(config.getCommonObjectFile());
 		compBooksLocators=readProps.getLocatorMap(config.getComputerBooksObjectFile());
 		bbpLocators=readProps.getLocatorMap(config.getBusinessBooksObjectFile());
+		log.debug("Reading object repository....");
 	}
 /**
  * login method to verify login functionality, give username and password
@@ -50,7 +57,7 @@ public class AppFunctions
  * @return
  * @throws InterruptedException 
  */
-	public boolean doLogin(String defaultUserName, String defaultPasword) throws InterruptedException 
+	public boolean doLogin(String defaultUserName, String defaultPasword) throws Exception 
 	{
 		 
 		selenium.getElement(commLocators.get("commonObject.SignLink")).click();
@@ -59,6 +66,16 @@ public class AppFunctions
 		selenium.getElement(commLocators.get("commonObject.LoginButton")).click();
 		
 		Thread.sleep(10000);
+		
+		// robot class to simulate the mouse click at a particular position on 
+		//the page to close the save password dialog 
+		
+		Robot robot= new Robot();
+		
+		robot.mouseMove(50,50);
+
+		robot.mousePress(InputEvent.BUTTON1_MASK);// left mouse click
+		robot.mouseRelease(InputEvent.BUTTON1_MASK); // release left mouse click
 		
 		boolean bLogin=selenium.getElement(commLocators.get("commonObject.AccountButton")).isDisplayed();
 		
@@ -76,6 +93,10 @@ public class AppFunctions
 			
 			switch(sMenuName.toUpperCase())
 			{
+			case "VIDEOS":
+				   
+				   selenium.clickOnElement(commLocators.get("commonObjects.Movie.Link"));
+				   return true;
 				case "COMPUTERBOOKS":
 					   
 					   //selenium.getElement(compBooksLocators.get("cpBooksPage.MenuLink")).click();
@@ -178,7 +199,62 @@ public class AppFunctions
 			}
 		}
 	}
+	/**
+	 * It will play the specified movie
+	 * @param movieName
+	 */
+	public void playMovie2()
+	{
+		JavascriptExecutor js= (JavascriptExecutor)selenium.getWebDriver();
+		
+		js.executeScript("return document.getElementById('player')");
+	}
 	
+	/**
+	 * It will play the specified movie
+	 * @param movieName
+	 * @throws InterruptedException 
+	 */
+	public boolean playMovie(String movieName, long totalPlayTime) throws InterruptedException
+	{
+		//play
+		WebElement ele=selenium.getPresentElement(commLocators.get
+				("commonObjects.MovieId").replace("#movie#", movieName));
+		
+		ele.click();
+		boolean bPlay=isVideoPlaying(ele);
+		Thread.sleep(totalPlayTime*1000);
+		selenium.takeScreenshot(movieName);
+		
+		selenium.getWebDriver().switchTo().defaultContent();
+		// stop
+		ele.click();
+		
+	    return bPlay;
+	}
+	
+	public boolean isVideoPlaying(WebElement ele)
+	{
+		selenium.getWebDriver().switchTo().frame(ele);
+		WebElement elePlayerId=selenium.getElement(commLocators.get("commonObjects.PlayerId"));
+		System.out.println("----"+elePlayerId.getAttribute("class"));
+	
+		if(elePlayerId.getAttribute("class").contains("playing-mode"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	//html5-video-player ytp-small-mode ad-created iv-module-loaded 
+	//ad-showing ytp-ad-overlay-closed ytp-expand-pause-overlay paused-mode
+	//html5-video-player ytp-small-mode ad-created iv-module-loaded 
+	//ad-showing ytp-ad-overlay-closed playing-mode ytp-autohide
+	
+	//html5-video-player unstarted-mode ytp-hide-controls ytp-small-mode
 	public void closeAlert()
 	{
 		selenium.closeAlert();

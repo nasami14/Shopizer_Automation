@@ -1,0 +1,15 @@
+shopizer/PageSteps/ContactPageTest.class
+shopizer/PageSteps/BusinessPageTest.class
+shopizer/PageSteps/RegistrationTest.class
+shopizer/PageSteps/LoginSteps.class
+shopizer/PageObjects/ComputerBooksPage.class
+shopizer/PageObjects/OrderCheckoutPage.class
+shopizer/PageObjects/OrderReviewPage.class
+shopizer/PageSteps/ComputerBooksPageTest.class
+shopizer/PageSteps/OrderReviewTest.class
+shopizer/PageObjects/ProductInfoPage.class
+shopizer/PageObjects/RegistrationPage.class
+shopizer/PageObjects/OrderConfirmationPage.class
+shopizer/PageObjects/ContactPage.class
+shopizer/PageObjects/BusinessBooksPage.class
+shopizer/PageObjects/LoginPage.class

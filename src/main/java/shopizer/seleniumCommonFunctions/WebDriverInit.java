@@ -6,7 +6,9 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.CapabilityType;
+//import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class WebDriverInit {
@@ -19,6 +21,7 @@ public class WebDriverInit {
 	{
 		config=Config.getInstance();
 		initWebDriver(config.getBrowserName());
+		setImplicitWait(config.getImplicitWait());
 		
 	}
 	private void initWebDriver(String sBrowserName)
@@ -33,7 +36,6 @@ public class WebDriverInit {
 					//home/amir/workspace_automation/shopizer_automation/drivers/geckodriver
 					 
 					System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+config.getFirefoxDriverPath());
-
 					
 					DesiredCapabilities cap= DesiredCapabilities.firefox();
 					cap.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, true);
@@ -43,9 +45,16 @@ public class WebDriverInit {
 				{
 					 
 					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+config.getChromeDriverPath());
-					System.out.println("----------------"+System.getProperty("user.dir")+config.getChromeDriverPath());
 					DesiredCapabilities cap= DesiredCapabilities.chrome();
 					driver= new ChromeDriver(cap);
+				}
+				else if(sBrowserName.toLowerCase().equals("headless"))
+				{
+					 
+					DesiredCapabilities cap= DesiredCapabilities.htmlUnit();
+					cap.setJavascriptEnabled(false);
+					cap.setCapability(CapabilityType.TAKES_SCREENSHOT, true);
+					driver= new HtmlUnitDriver(cap);
 				}
 				else
 				{

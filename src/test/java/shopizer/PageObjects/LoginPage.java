@@ -15,7 +15,7 @@ public class LoginPage {
 		
 	}
 
-	public boolean loginTest(String defaultUserName, String defaultPasword) throws InterruptedException 
+	public boolean loginTest(String defaultUserName, String defaultPasword) throws Exception 
 	{
 		 
 		boolean bLogin=app.doLogin(defaultUserName, defaultPasword);
