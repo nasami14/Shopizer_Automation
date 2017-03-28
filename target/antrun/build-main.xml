@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="maven-antrun-" default="main"  >
 <target name="main">
-  <ant antfile="/home/amir/workspaceShopizerAutomation/ShopizerAutomation/build.xml">
+  <ant antfile="/home/amir/gitrepository/Shopizer_Automation/build.xml">
     <target name="HtmlReport"/>
   </ant>
 </target>

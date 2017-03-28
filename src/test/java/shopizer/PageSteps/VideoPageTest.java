@@ -28,6 +28,7 @@ public class VideoPageTest {
 
 	}
 	
+	@Test
 	public void TC_001_verify_video_streaming()
 	{
 		try {

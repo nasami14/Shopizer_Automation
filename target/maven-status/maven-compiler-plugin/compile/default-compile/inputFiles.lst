@@ -1,8 +1,8 @@
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/utility/Utility.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/utility/ExceptionHandler.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/utility/Excel_Reader.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/seleniumCommonFunctions/Config.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/seleniumCommonFunctions/WebDriverInit.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/seleniumCommonFunctions/SeleniumCommon.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/utility/ReadPropertyFile.java
-/home/amir/workspaceShopizerAutomation/ShopizerAutomation/src/main/java/shopizer/businessFunctions/AppFunctions.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/utility/ReadPropertyFile.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/businessFunctions/AppFunctions.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/seleniumCommonFunctions/WebDriverInit.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/seleniumCommonFunctions/SeleniumCommon.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/utility/ExceptionHandler.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/seleniumCommonFunctions/Config.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/utility/Utility.java
+/home/amir/gitrepository/Shopizer_Automation/src/main/java/shopizer/utility/Excel_Reader.java

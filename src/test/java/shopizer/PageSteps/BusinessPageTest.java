@@ -15,7 +15,6 @@ import shopizer.PageObjects.ProductInfoPage;
 import shopizer.businessFunctions.AppFunctions;
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
-import shopizer.utility.Excel_Reader;
 import shopizer.utility.ExceptionHandler;
 
 public class BusinessPageTest {
