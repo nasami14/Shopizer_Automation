@@ -650,7 +650,7 @@ public class SeleniumCommon extends WebDriverInit {
 		catch (Exception e) 
 		{
 			e.printStackTrace();
-			log.error(" Unknown locator type :"+arrLocator[0]);
+			log.error(" Failed to find element :"+arrLocator[1] + " by "+arrLocator[0]);
 			ExceptionHandler.addVerificationFailure(e);
 			
 		}

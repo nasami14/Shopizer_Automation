@@ -90,7 +90,7 @@ public class AppFunctions
 	public boolean selectMenu(String sMenuName) throws Exception
 	{
 		
-			
+			Thread.sleep(10000);
 			switch(sMenuName.toUpperCase())
 			{
 			case "VIDEOS":

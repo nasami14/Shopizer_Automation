@@ -37,7 +37,7 @@ public class VideoPageTest {
 			// Step 2: play the video
 			Assert.assertTrue(app.playMovie("Pavarotti", 10));
 			Assert.assertTrue(app.playMovie("Andrea Bochelli", 10));
-			Assert.assertTrue(app.playMovie("Phil Callins", 10));
+			//Assert.assertTrue(app.playMovie("Phil Callins", 10));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
