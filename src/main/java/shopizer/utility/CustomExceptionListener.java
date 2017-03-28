@@ -24,11 +24,7 @@ public class CustomExceptionListener implements IInvokedMethodListener
 	{
 		Reporter.setCurrentTestResult(result);
 		
-		Object obj[]=result.getParameters();
-		for(int i=0;i<obj.length;i++)
-		{
-			System.out.println(obj[i]);
-		}
+		
 		if (method.isTestMethod())
 		{
 			List<Throwable> verificationFailures = ExceptionHandler.getVerificationFailures();
