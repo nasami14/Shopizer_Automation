@@ -39,8 +39,8 @@ public class OrderReviewTest
 
 	}
 
-	//@Parameters("ItemName")
-	//@Test(groups = { "SmokeTest" })
+	@Parameters("ItemName")
+	@Test(groups = { "SmokeTest" })
 	public void TC_01_Verify_that_item_added_to_cart(@Optional("Node Web Development") String sItemName)
 			throws InterruptedException {
 		try {

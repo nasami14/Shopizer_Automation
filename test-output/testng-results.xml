@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="178440" started-at="2017-06-07T06:11:05Z" finished-at="2017-06-07T06:14:03Z">
+  <suite name="Default suite" duration-ms="94675" started-at="2017-06-07T07:00:08Z" finished-at="2017-06-07T07:01:43Z">
     <groups>
       <group name="SmokeTest">
-        <method signature="OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@20d28811]" name="TC_02_VerifyThat_Item_is_removed_from_cart" class="shopizer.PageSteps.OrderReviewTest"/>
+        <method signature="OrderReviewTest.TC_01_Verify_that_item_added_to_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="TC_01_Verify_that_item_added_to_cart" class="shopizer.PageSteps.OrderReviewTest"/>
+        <method signature="OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="TC_02_VerifyThat_Item_is_removed_from_cart" class="shopizer.PageSteps.OrderReviewTest"/>
       </group> <!-- SmokeTest -->
     </groups>
-    <test name="Default test" duration-ms="178440" started-at="2017-06-07T06:11:05Z" finished-at="2017-06-07T06:14:03Z">
+    <test name="Default test" duration-ms="94675" started-at="2017-06-07T07:00:08Z" finished-at="2017-06-07T07:01:43Z">
       <class name="shopizer.PageSteps.OrderReviewTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@20d28811]" name="setUp" is-config="true" duration-ms="20809" started-at="2017-06-07T08:11:05Z" finished-at="2017-06-07T08:11:26Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="setUp" is-config="true" duration-ms="19711" started-at="2017-06-07T09:00:08Z" finished-at="2017-06-07T09:00:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@20d28811]" name="TC_02_VerifyThat_Item_is_removed_from_cart" duration-ms="157471" started-at="2017-06-07T08:11:26Z" finished-at="2017-06-07T08:14:03Z">
+        <test-method status="PASS" signature="TC_01_Verify_that_item_added_to_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="TC_01_Verify_that_item_added_to_cart" duration-ms="35549" started-at="2017-06-07T09:00:28Z" finished-at="2017-06-07T09:01:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Node Web Development]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Verify_that_item_added_to_cart -->
+        <test-method status="PASS" signature="TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="TC_02_VerifyThat_Item_is_removed_from_cart" duration-ms="39224" started-at="2017-06-07T09:01:03Z" finished-at="2017-06-07T09:01:42Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02_VerifyThat_Item_is_removed_from_cart -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@20d28811]" name="closeBrowser" is-config="true" duration-ms="118" started-at="2017-06-07T08:14:03Z" finished-at="2017-06-07T08:14:03Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4501b7af]" name="closeBrowser" is-config="true" duration-ms="158" started-at="2017-06-07T09:01:42Z" finished-at="2017-06-07T09:01:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
