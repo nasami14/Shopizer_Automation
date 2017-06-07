@@ -12,11 +12,7 @@ import java.util.TreeMap;
 import org.apache.log4j.Logger;
 
 import shopizer.seleniumCommonFunctions.Config;
-/**
- * 
- * @author narendra gurjar
- *
- */
+
 public class ReadPropertyFile
 {
 	private FileInputStream objFis = null;
@@ -27,16 +23,13 @@ public class ReadPropertyFile
 	{
 		try
 		{
-			// getObjectRepoPath method returns base path of all properties file
-			//Config.getInstance().getObjectRepoPath() : /src/test/resources/ObjectRepository/
-			
-			//sFileName: it is the name for file inside object repository and could be CommonObjects.Prpperties or
-			// ComputerBooks PageObject .prpperties , but we will make more afterwards
-			
-			///src/test/resources/ObjectRepository/CommonObjects.properties 
-			//src/test/resources/ObjectRepository/CommonObjects.properties
-			//"sFullFilePath"	/home/amir/workspace_automation/shopizer_automation/shopizer_automation/src/test/resources/ObjectRepository/CommonObjects.properties	
-//"sFullFilePath"	/home/amir/workspace_automation/shopizer_automation/src/test/resources/ObjectRepository/CommonObjects.properties	
+		/* getObjectRepoPath method returns base path of all properties file*/
+		 /*Config.getInstance().getObjectRepoPath():/src/test/resources/ObjectRepository*/
+		 /*sFileName: it is the name for file inside object repository and could be CommonObjects.Prpperties or
+		 ComputerBooks PageObject.prpperties or more .....*/
+		/*src/test/resources/ObjectRepository/CommonObjects.properties 
+		"sFullFilePath"	/home/amir/workspace_automation/shopizer_automation/shopizer_automation/src/test/resources/ObjectRepository/CommonObjects.properties*/	
+/*"sFullFilePath" /home/amir/workspace_automation/shopizer_automation/src/test/resources/ObjectRepository/CommonObjects.properties*/	
 
 			String sFullFilePath =System.getProperty("user.dir")+Config.getInstance().getObjectRepoPath()+sFileName;
 			objFis = new FileInputStream(sFullFilePath);

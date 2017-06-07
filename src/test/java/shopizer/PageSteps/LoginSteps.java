@@ -28,14 +28,17 @@ public class LoginSteps {
 	public void loginTest() throws InterruptedException
 	{
 		try {
-			System.out.println(""+config.getDefaultUserName());
+			System.out.println("-"+config.getDefaultUserName());
 			System.out.println(""+config.getDefaultPasword());
 			boolean isLogin=lp.loginTest(config.getDefaultUserName(),config.getDefaultPasword());
+			System.out.println("====="+isLogin);
 			Assert.assertTrue(isLogin,"Login is Failed");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			ExceptionHandler.addVerificationFailure(e);
+			Assert.fail("Login is Failed");
+			
 		}
 	}
 	@AfterTest

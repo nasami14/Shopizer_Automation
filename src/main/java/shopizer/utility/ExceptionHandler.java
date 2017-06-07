@@ -8,23 +8,15 @@ import java.util.Map;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-/**
- * A utility that use to interact with exception
- * 
- * @author GurjarN 
- * 
- */
+/* A utility that use to interact with exception.*/
 public class ExceptionHandler
 {
 
 	@SuppressWarnings("rawtypes")
 	private static Map<ITestResult, List> verificationFailuresMap = new HashMap<ITestResult, List>();
 
-	/**
-	 * get the list of the varification failures from the current test result
-	 * 
-	 * @return return a list of the varification failures
-	 */
+	/* get the list of the verification failures from the current test result
+	  @return return a list of the verification failures */
 	@SuppressWarnings("rawtypes")
 	public static List getVerificationFailures()
 	{
@@ -32,12 +24,7 @@ public class ExceptionHandler
 		return verificationFailures == null ? new ArrayList() : verificationFailures;
 	}
 
-	/**
-	 * add varification failure to current test Result
-	 * 
-	 * @param e
-	 *            - Throwable type
-	 */
+	/* add verification failure to current test Result. @param e - Throwable type */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void addVerificationFailure(Throwable e)
 	{

@@ -19,9 +19,7 @@ public class BusinessBooksPage {
 	Config config = Config.getInstance();
 
 	ReadPropertyFile readProps;
-	TreeMap<String, String> compBooksLocators;// map to store locator for
-												// Computer books object
-												// repository
+	TreeMap<String, String> compBooksLocators;// map to store locator for Computer books object repository
 
 	Logger log = Logger.getLogger(ComputerBooksPage.class);
 

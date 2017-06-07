@@ -1,13 +1,10 @@
 package shopizer.PageSteps;
-
-
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import shopizer.PageObjects.ComputerBooksPage;
 import shopizer.PageObjects.OrderCheckoutPage;
 import shopizer.PageObjects.OrderConfirmationPage;

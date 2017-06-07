@@ -1,7 +1,6 @@
 package shopizer.seleniumCommonFunctions;
 
 import java.io.File;
-import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +45,6 @@ public class SeleniumCommon extends WebDriverInit {
 
 	/**
 	 * get title of the web page
-	 * 
 	 * @return it return the title of current web page as a String
 	 */
 	public String getTitle() {
@@ -58,12 +56,10 @@ public class SeleniumCommon extends WebDriverInit {
 		log.debug("Current URL : "+getWebDriver().getCurrentUrl());
 		return getWebDriver().getCurrentUrl();
 	}
-
 	/**
 	 * get the WebDriverWait object.
-	 * 
 	 * @param iSecond
-	 *            - it takes explicit wait time in second
+	 * it takes explicit wait time in second
 	 * @return it return the WebDriverWait object
 	 */
 	public WebDriverWait getWebDriverWait(int iSecond) {
@@ -80,7 +76,6 @@ public class SeleniumCommon extends WebDriverInit {
 	/**
 	 * this method will take String parameter which is the value from
 	 * ObjectRepository something like this- ID:=email
-	 * 
 	 * @return it returns WebElement
 	 * @param sLocatorValue
 	 */
@@ -95,14 +90,10 @@ public class SeleniumCommon extends WebDriverInit {
 			if (arrLocator.length != 2) {
 				throw new Exception("Locator value is not correct");
 			}
-
-			// now arrLocator[0] contains value for switch case
-			// and arrLocator[1] contains the value for web element
 			
-			switch (arrLocator[0].toUpperCase().trim())// arrLocator[0] -> 0th index
-													// will be having
-													// locatorType from
-													// arrLocator
+			/* now arrLocator[0] contains value for switch case and arrLocator[1] contains the value for web element*/
+			switch (arrLocator[0].toUpperCase().trim())
+			/* arrLocator[0] -> 0th index will be having locatorType from arrLocator */
 			{
 			case "XPATH":
 
@@ -135,8 +126,7 @@ public class SeleniumCommon extends WebDriverInit {
 				log.error(" Unknown locator type :"+arrLocator[0]);
 				throw new Exception("Unknown locator type :"+arrLocator[0]);
 			}
-			
-			
+					
 		} 
 		
 		catch (Exception e) 
@@ -152,7 +142,6 @@ public class SeleniumCommon extends WebDriverInit {
 	/**
 	 * this method will take String parameter which is the value from
 	 * ObjectRepository something like this- ID:=email
-	 * 
 	 * @return it returns WebElement
 	 * @param sLocatorValue
 	 */
@@ -168,13 +157,12 @@ public class SeleniumCommon extends WebDriverInit {
 				throw new Exception("Locator value is not correct");
 			}
 
-			// now arrLocator[0] contains value for switch case
-			// and arrLocator[1] contains the value for web element
+			/* now arrLocator[0] contains value for switch case and arrLocator[1] contains the value for web element*/
 			
-			switch (arrLocator[0].toUpperCase().trim())// arrLocator[0] -> 0th index
-													// will be having
-													// locatorType from
-													// arrLocator
+			switch (arrLocator[0].toUpperCase().trim())
+			/* arrLocator[0] -> 0th index
+			 will be having locatorType from arrLocator */
+													
 			{
 			case "XPATH":
 
@@ -207,8 +195,7 @@ public class SeleniumCommon extends WebDriverInit {
 				log.error(" Unknown locator type :"+arrLocator[0]);
 				throw new Exception("Unknown locator type :"+arrLocator[0]);
 			}
-			
-			
+					
 		} 
 		
 		catch (Exception e) 
@@ -219,15 +206,13 @@ public class SeleniumCommon extends WebDriverInit {
 			
 		}
 		return ele;
-		
 	}
 	/**
 	 * This method will be select the provided value from drop down
 	 * @param eleDropDown - drop down web element object
 	 * @param sValueToBeselect
 	 */
-	public void selectDropDown(WebElement eleDropDown, String sValueToBeselect)
-	{
+	public void selectDropDown(WebElement eleDropDown, String sValueToBeselect)	{
 		
 		try {
 			
@@ -265,10 +250,8 @@ public class SeleniumCommon extends WebDriverInit {
 		return bSelected;
 		
 	}
-	public List<WebElement> getChildElements(WebElement eleRoot,String sChildElementLocator)
-	{
-		
-		
+	public List<WebElement> getChildElements(WebElement eleRoot,String sChildElementLocator){
+				
 		String arrLocator[] = null;
 		List<WebElement> eleList = null;
 		try {
@@ -315,8 +298,7 @@ public class SeleniumCommon extends WebDriverInit {
 				log.error(" Unknown locator type :"+arrLocator[0]);
 				throw new Exception("Unknown locator type :"+arrLocator[0]);
 			}
-			
-			
+					
 		} 
 		
 		catch (Exception e) 
@@ -328,7 +310,6 @@ public class SeleniumCommon extends WebDriverInit {
 		}
 		return eleList;
 
-		
 	}
 	/**
 	 * Get child element from root element
@@ -336,9 +317,7 @@ public class SeleniumCommon extends WebDriverInit {
 	 * @param sChildElementLocator
 	 * @return
 	 */
-	public WebElement getChildElement(WebElement eleRoot,String sChildElementLocator)
-	{
-		
+	public WebElement getChildElement(WebElement eleRoot,String sChildElementLocator) {
 		
 		String arrLocator[] = null;
 		WebElement eleList = null;
@@ -386,8 +365,7 @@ public class SeleniumCommon extends WebDriverInit {
 				log.error(" Unknown locator type :"+arrLocator[0]);
 				throw new Exception("Unknown locator type :"+arrLocator[0]);
 			}
-			
-			
+					
 		} 
 		
 		catch (Exception e) 
@@ -398,11 +376,9 @@ public class SeleniumCommon extends WebDriverInit {
 			
 		}
 		return eleList;
-
 		
 	}
 	/**
-	 * 
 	 * @param sLocator - Locator Value
 	 */
 	public void doubleClick(String sLocator)
@@ -412,7 +388,6 @@ public class SeleniumCommon extends WebDriverInit {
 		
 	}
 	/**
-	 * 
 	 * @param sLocator - Locator Value
 	 */
 	public void click(String sLocator)
@@ -422,7 +397,6 @@ public class SeleniumCommon extends WebDriverInit {
 		
 	}
 	/**
-	 * 
 	 * @param sLocator - Locator Value
 	 */
 	public void clickOnElement(String sLocator)
@@ -432,7 +406,6 @@ public class SeleniumCommon extends WebDriverInit {
 		
 	}
 	/**
-	 * 
 	 * @return
 	 */
 	public boolean enterText(String sLocator,String sValueToBeEntered)
@@ -475,7 +448,6 @@ public class SeleniumCommon extends WebDriverInit {
 	/**
 	 * this method will take String parameter which is the value from
 	 * ObjectRepository something like this- ID:=email
-	 * 
 	 * @return it returns list of  WebElement
 	 * @param sLocatorValue
 	 */
@@ -566,13 +538,7 @@ public class SeleniumCommon extends WebDriverInit {
 		
 		action.moveToElement(ele,x+5,y+5).clickAndHold(ele).release().click(ele).build().perform();
 	}
-	
-	
-	
-	
-	/**
-	 * 
-	 */
+		
 	public void takeScreenshot(String sFilename)
 	{
 	
@@ -643,8 +609,7 @@ public class SeleniumCommon extends WebDriverInit {
 				log.error(" Unknown locator type :"+arrLocator[0]);
 				throw new Exception("Unknown locator type :"+arrLocator[0]);
 			}
-			
-			
+					
 		} 
 		
 		catch (Exception e) 
@@ -655,6 +620,17 @@ public class SeleniumCommon extends WebDriverInit {
 			
 		}
 		return ele;
+		
+	}
+
+	public void waitTimeInSeconds(int i) {
+		// TODO Auto-generated method stub
+		try {
+			Thread.sleep(i*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 }

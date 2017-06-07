@@ -89,6 +89,7 @@ public class ComputerBooksPage {
 		
 		WebElement productContainer=selenium.getElement(compBooksLocators.get("cpBooksPage.ProductListContainer"));
 		boolean bSorted=false;
+		selenium.waitTimeInSeconds(5);
 		switch(sFilterType.toUpperCase())
 		{
 		

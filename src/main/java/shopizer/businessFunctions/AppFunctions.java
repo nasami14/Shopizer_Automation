@@ -1,46 +1,34 @@
 package shopizer.businessFunctions;
-
 import java.awt.Robot;
 import java.awt.event.InputEvent;
-import java.awt.event.KeyEvent;
 import java.util.List;
 import java.util.TreeMap;
-
 import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.interactions.Mouse;
-
 import shopizer.seleniumCommonFunctions.Config;
 import shopizer.seleniumCommonFunctions.SeleniumCommon;
 import shopizer.utility.ReadPropertyFile;
 
 public class AppFunctions   
-{
-	
+{	
 	Logger log=Logger.getLogger(AppFunctions.class);
-	SeleniumCommon selenium;
-	
+	SeleniumCommon selenium;	
 	ReadPropertyFile  readProps;
-	TreeMap<String,String>commLocators;// map to store locator for common Object repository
-	TreeMap<String,String>compBooksLocators;// map to store locator for Computer books object repository
-	
+	// map to store locator for common Object repository
+	TreeMap<String,String>commLocators;
+	// map to store locator for Computer books object repository
+	TreeMap<String,String>compBooksLocators;	
 	TreeMap<String,String>bbpLocators;
-	Config config=Config.getInstance();
+	Config config=Config.getInstance();	
 	
-	
-
 	public AppFunctions(SeleniumCommon selenium) 
 	{
 		this.selenium=selenium;
 		readObjects();
 	}
 	
-
-	/**
-	 *  read the web element objects from object repository file
-	 */
+	// read the web element objects from object repository file
 	private void readObjects() 
 	{
 		readProps= new ReadPropertyFile();
@@ -71,13 +59,16 @@ public class AppFunctions
 		//the page to close the save password dialog 
 		
 		Robot robot= new Robot();
-		
 		robot.mouseMove(50,50);
 
 		robot.mousePress(InputEvent.BUTTON1_MASK);// left mouse click
 		robot.mouseRelease(InputEvent.BUTTON1_MASK); // release left mouse click
 		
-		boolean bLogin=selenium.getElement(commLocators.get("commonObject.AccountButton")).isDisplayed();
+		boolean bLogin=false;
+		selenium.getElement(commLocators.get("commonObject.AccountButton")).click();
+		bLogin=selenium.getElement(commLocators.get("commonObject.Logout")).isDisplayed();
+		
+		selenium.getElement(commLocators.get("commonObject.AccountButton")).click();
 		
 		return bLogin;
 	}
@@ -90,26 +81,26 @@ public class AppFunctions
 	public boolean selectMenu(String sMenuName) throws Exception
 	{
 		
-			Thread.sleep(10000);
-			switch(sMenuName.toUpperCase())
-			{
-			case "VIDEOS":
+		Thread.sleep(10000);
+		switch(sMenuName.toUpperCase())
+		{
+		case "VIDEOS":
 				   
-				   selenium.clickOnElement(commLocators.get("commonObjects.Movie.Link"));
-				   return true;
-				case "COMPUTERBOOKS":
+		selenium.clickOnElement(commLocators.get("commonObjects.Movie.Link"));
+		return true;
+		case "COMPUTERBOOKS":
 					   
-					   //selenium.getElement(compBooksLocators.get("cpBooksPage.MenuLink")).click();
-					   selenium.doubleClick(compBooksLocators.get("cpBooksPage.MenuLink"));
-					   //selenium.getElementByClickable(compBooksLocators.get("cpBooksPage.ComputerBookMenu")).click();
-					return selenium.getElement(compBooksLocators.get("cpBooksPage.ComputerBooksMenuHeader")).isDisplayed();
-				case "BUSINESSBOOKS":
+		//selenium.getElement(compBooksLocators.get("cpBooksPage.MenuLink")).click();
+		selenium.doubleClick(compBooksLocators.get("cpBooksPage.MenuLink"));
+		//selenium.getElementByClickable(compBooksLocators.get("cpBooksPage.ComputerBookMenu")).click();
+		return selenium.getElement(compBooksLocators.get("cpBooksPage.ComputerBooksMenuHeader")).isDisplayed();
+		case "BUSINESSBOOKS":
 					   
-					   //selenium.getElement(compBooksLocators.get("cpBooksPage.MenuLink")).click();
-					   selenium.doubleClick(bbpLocators.get("bbPage.MenuLink"));
-					   //selenium.getElementByClickable(compBooksLocators.get("cpBooksPage.ComputerBookMenu")).click();
-					return selenium.getElement(bbpLocators.get("bbPage.BusinessMenuHeader")).isDisplayed();
-				case "TECHNOLOGYBOOKS":
+		//selenium.getElement(compBooksLocators.get("cpBooksPage.MenuLink")).click();
+		selenium.doubleClick(bbpLocators.get("bbPage.MenuLink"));
+		//selenium.getElementByClickable(compBooksLocators.get("cpBooksPage.ComputerBookMenu")).click();
+		return selenium.getElement(bbpLocators.get("bbPage.BusinessMenuHeader")).isDisplayed();
+			case "TECHNOLOGYBOOKS":
 					selenium.getElementByClickable(compBooksLocators.get("")).click();
 					
 					return  selenium.getElement(compBooksLocators.get("cpBooksPage.TechnologyBooksMenuHeader")).isDisplayed();
@@ -127,7 +118,7 @@ public class AppFunctions
 	}
 	/**
 	 * 
-	 * @param sDropDownName - Name of the drop down box in you application
+	 * @param sDropDownName - Name of the drop down box in our application
 	 * @return
 	 */
 	public WebElement getDropDown(String sDropDownName)

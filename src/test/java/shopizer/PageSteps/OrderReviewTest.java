@@ -39,8 +39,8 @@ public class OrderReviewTest
 
 	}
 
-	@Parameters("ItemName")
-	@Test(groups = { "SmokeTest" })
+	//@Parameters("ItemName")
+	//@Test(groups = { "SmokeTest" })
 	public void TC_01_Verify_that_item_added_to_cart(@Optional("Node Web Development") String sItemName)
 			throws InterruptedException {
 		try {
@@ -79,7 +79,7 @@ public class OrderReviewTest
 				Thread.sleep(6000);
 				/// Step 3 : review item details and add to cart
 				prodInfo.reviewItemDetailsAndAddTocart(sItemName);
-				Thread.sleep(3000);
+				Thread.sleep(5000);
 			
 				/// Step 4: open cart , remove the item and verify that item is removed form cart
 				String bActualResult=orderReview.openCartAndverifyRemoveItem(sItemName);

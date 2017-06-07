@@ -1,22 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 32.967 sec <<< FAILURE! - in TestSuite
-TC_001_verify_video_streaming(shopizer.PageSteps.VideoPageTest)  Time elapsed: 20.345 sec  <<< FAILURE!
+Tests run: 18, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 704.802 sec <<< FAILURE! - in TestSuite
+TC_004_Verify_ItemOrder_Completion(shopizer.PageSteps.ComputerBooksPageTest)  Time elapsed: 53.493 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at shopizer.PageSteps.ComputerBooksPageTest.TC_004_Verify_ItemOrder_Completion(ComputerBooksPageTest.java:146)
+
+TC_004_Verify_ItemOrder_Completion(shopizer.PageSteps.BusinessPageTest)  Time elapsed: 43.526 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at shopizer.PageSteps.BusinessPageTest.TC_004_Verify_ItemOrder_Completion(BusinessPageTest.java:146)
+
+TC_02_VerifyThat_Item_is_removed_from_cart(shopizer.PageSteps.OrderReviewTest)  Time elapsed: 99.971 sec  <<< FAILURE!
 java.lang.Throwable: 
-Multiple failures (4):nnFailure 1 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: VideosLink6 (tried for 10 second(s) with 500 MILLISECONDS interval)
+Multiple failures (2):nnFailure 1 of 2:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id="miniCartDetails"]/li/h4 (tried for 40 second(s) with 500 MILLISECONDS interval)
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:621)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:430)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
+	at shopizer.seleniumCommonFunctions.SeleniumCommon.getElement(SeleniumCommon.java:100)
+	at shopizer.PageObjects.OrderReviewPage.openCartAndverifyRemoveItem(OrderReviewPage.java:94)
+	at shopizer.PageSteps.OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(OrderReviewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -44,115 +50,17 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"VideosLink6"}
-  (Session info: chrome=57.0.2987.110)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id="miniCartDetails"]/li/h4"}
+  (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.11 seconds
+Command duration or timeout: 30.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=id, value=VideosLink6}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	... 32 more
-nnFailure 2 of 4:njava.lang.NullPointerException
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:431)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-nnFailure 3 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: .//*[@id='Pavarotti'] (tried for 10 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:617)
-	at shopizer.businessFunctions.AppFunctions.playMovie(AppFunctions.java:221)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='Pavarotti']"}
-  (Session info: chrome=57.0.2987.110)
-  (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=xpath, value=.//*[@id='Pavarotti']}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
+*** Element info: {Using=xpath, value=.//*[@id="miniCartDetails"]/li/h4}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -166,10 +74,10 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
 	... 30 more
-nnFailure 4 of 4:njava.lang.NullPointerException
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:38)
+nnFailure 2 of 2:njava.lang.NullPointerException
+	at shopizer.PageSteps.OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(OrderReviewTest.java:85)
 

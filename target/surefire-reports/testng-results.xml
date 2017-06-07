@@ -1,32 +1,371 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="3" total="18" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="DemoTestSuite" duration-ms="31726" started-at="2017-03-28T18:43:00Z" finished-at="2017-03-28T18:43:32Z">
+  <suite name="DemoTestSuite" duration-ms="702625" started-at="2017-04-29T08:18:28Z" finished-at="2017-04-29T08:30:10Z">
     <groups>
+      <group name="SmokeTest">
+        <method signature="OrderReviewTest.TC_01_Verify_that_item_added_to_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="TC_01_Verify_that_item_added_to_cart" class="shopizer.PageSteps.OrderReviewTest"/>
+        <method signature="OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="TC_02_VerifyThat_Item_is_removed_from_cart" class="shopizer.PageSteps.OrderReviewTest"/>
+      </group> <!-- SmokeTest -->
     </groups>
-    <test name="VideoStreaming" duration-ms="31726" started-at="2017-03-28T18:43:00Z" finished-at="2017-03-28T18:43:32Z">
-      <class name="shopizer.PageSteps.VideoPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.VideoPageTest@5f2050f6]" name="setUp" is-config="true" duration-ms="11171" started-at="2017-03-28T20:43:00Z" finished-at="2017-03-28T20:43:11Z">
+    <test name="Login_Test" duration-ms="24244" started-at="2017-04-29T08:18:28Z" finished-at="2017-04-29T08:18:52Z">
+      <class name="shopizer.PageSteps.LoginSteps">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.LoginSteps@702657cc]" name="setUp" is-config="true" duration-ms="10889" started-at="2017-04-29T10:18:28Z" finished-at="2017-04-29T10:18:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="TC_001_verify_video_streaming()[pri:0, instance:shopizer.PageSteps.VideoPageTest@5f2050f6]" name="TC_001_verify_video_streaming" duration-ms="20269" started-at="2017-03-28T20:43:11Z" finished-at="2017-03-28T20:43:31Z">
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:shopizer.PageSteps.LoginSteps@702657cc]" name="loginTest" duration-ms="13121" started-at="2017-04-29T10:18:39Z" finished-at="2017-04-29T10:18:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.LoginSteps@702657cc]" name="closeBrowser" is-config="true" duration-ms="122" started-at="2017-04-29T10:18:52Z" finished-at="2017-04-29T10:18:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shopizer.PageSteps.LoginSteps -->
+    </test> <!-- Login_Test -->
+    <test name="ComputerBooksPageAllTestCases" duration-ms="197415" started-at="2017-04-29T08:18:52Z" finished-at="2017-04-29T08:22:09Z">
+      <class name="shopizer.PageSteps.ComputerBooksPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="setUp" is-config="true" duration-ms="20687" started-at="2017-04-29T10:18:52Z" finished-at="2017-04-29T10:19:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_001_Verify_Search_ByName(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_001_Verify_Search_ByName" duration-ms="15428" started-at="2017-04-29T10:19:13Z" finished-at="2017-04-29T10:19:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_Verify_Search_ByName -->
+        <test-method status="PASS" signature="TC_002_Verify_Search_ByPrice(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_002_Verify_Search_ByPrice" duration-ms="15123" started-at="2017-04-29T10:19:28Z" finished-at="2017-04-29T10:19:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Price]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_Verify_Search_ByPrice -->
+        <test-method status="PASS" signature="TC_003_Verify_Search_By_entering_min_max_price(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_003_Verify_Search_By_entering_min_max_price" duration-ms="34529" started-at="2017-04-29T10:19:43Z" finished-at="2017-04-29T10:20:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Price]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_Verify_Search_By_entering_min_max_price -->
+        <test-method status="FAIL" signature="TC_004_Verify_ItemOrder_Completion(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_004_Verify_ItemOrder_Completion" duration-ms="53380" started-at="2017-04-29T10:20:18Z" finished-at="2017-04-29T10:21:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Node Web Development]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1001]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at shopizer.utility.Excel_Reader.getRowCount(Excel_Reader.java:54)
+	at shopizer.utility.Excel_Reader.getDataForTests(Excel_Reader.java:269)
+	at shopizer.PageObjects.OrderCheckoutPage.fillCustomerInfo(OrderCheckoutPage.java:41)
+	at shopizer.PageSteps.ComputerBooksPageTest.TC_004_Verify_ItemOrder_Completion(ComputerBooksPageTest.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_Verify_ItemOrder_Completion -->
+        <test-method status="PASS" signature="TC_005_Verify_publisherLink(java.lang.String)[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_005_Verify_publisherLink" duration-ms="13429" started-at="2017-04-29T10:21:11Z" finished-at="2017-04-29T10:21:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sams]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_Verify_publisherLink -->
+        <test-method status="PASS" signature="TC_006_Verify_AllPublisherLink()[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="TC_006_Verify_AllPublisherLink" duration-ms="34594" started-at="2017-04-29T10:21:25Z" finished-at="2017-04-29T10:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_Verify_AllPublisherLink -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:shopizer.PageSteps.ComputerBooksPageTest@22fcf7ab]" name="closeDriver" is-config="true" duration-ms="10098" started-at="2017-04-29T10:21:59Z" finished-at="2017-04-29T10:22:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- shopizer.PageSteps.ComputerBooksPageTest -->
+    </test> <!-- ComputerBooksPageAllTestCases -->
+    <test name="BusinessBookPageAllTestCases" duration-ms="195682" started-at="2017-04-29T08:22:10Z" finished-at="2017-04-29T08:25:25Z">
+      <class name="shopizer.PageSteps.BusinessPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="setUp" is-config="true" duration-ms="19200" started-at="2017-04-29T10:22:10Z" finished-at="2017-04-29T10:22:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_002_Verify_Search_ByPrice(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_002_Verify_Search_ByPrice" duration-ms="14009" started-at="2017-04-29T10:22:29Z" finished-at="2017-04-29T10:22:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Price]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_002_Verify_Search_ByPrice -->
+        <test-method status="PASS" signature="TC_003_Verify_Search_By_entering_min_max_price(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_003_Verify_Search_By_entering_min_max_price" duration-ms="35738" started-at="2017-04-29T10:22:43Z" finished-at="2017-04-29T10:23:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Price]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[15]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[40]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_003_Verify_Search_By_entering_min_max_price -->
+        <test-method status="FAIL" signature="TC_004_Verify_ItemOrder_Completion(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_004_Verify_ItemOrder_Completion" duration-ms="43525" started-at="2017-04-29T10:23:18Z" finished-at="2017-04-29T10:24:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[The Big Switch]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1001]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at shopizer.utility.Excel_Reader.getRowCount(Excel_Reader.java:54)
+	at shopizer.utility.Excel_Reader.getDataForTests(Excel_Reader.java:269)
+	at shopizer.PageObjects.OrderCheckoutPage.fillCustomerInfo(OrderCheckoutPage.java:41)
+	at shopizer.PageSteps.BusinessPageTest.TC_004_Verify_ItemOrder_Completion(BusinessPageTest.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_004_Verify_ItemOrder_Completion -->
+        <test-method status="PASS" signature="TC_005_Verify_publisherLink(java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_005_Verify_publisherLink" duration-ms="12898" started-at="2017-04-29T10:24:02Z" finished-at="2017-04-29T10:24:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Novells publishing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_005_Verify_publisherLink -->
+        <test-method status="PASS" signature="TC_006_Verify_AllPublisherLink()[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_006_Verify_AllPublisherLink" duration-ms="17815" started-at="2017-04-29T10:24:15Z" finished-at="2017-04-29T10:24:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_006_Verify_AllPublisherLink -->
+        <test-method status="PASS" signature="TC_007_Verify_facebook_share_link(java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_007_Verify_facebook_share_link" duration-ms="37908" started-at="2017-04-29T10:24:33Z" finished-at="2017-04-29T10:25:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[The Big Switch]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_007_Verify_facebook_share_link -->
+        <test-method status="PASS" signature="TC_01_Verify_Book_Search_ByName(java.lang.String, java.lang.String)[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="TC_01_Verify_Book_Search_ByName" duration-ms="14453" started-at="2017-04-29T10:25:11Z" finished-at="2017-04-29T10:25:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SORTFILTER]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Name]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Verify_Book_Search_ByName -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.BusinessPageTest@609cd4d8]" name="closeBrowser" is-config="true" duration-ms="110" started-at="2017-04-29T10:25:25Z" finished-at="2017-04-29T10:25:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shopizer.PageSteps.BusinessPageTest -->
+    </test> <!-- BusinessBookPageAllTestCases -->
+    <test name="ContactPageTestPageAllTestCases" duration-ms="76526" started-at="2017-04-29T08:25:25Z" finished-at="2017-04-29T08:26:42Z">
+      <class name="shopizer.PageSteps.ContactPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.ContactPageTest@5fbe4146]" name="setUp" is-config="true" duration-ms="20101" started-at="2017-04-29T10:25:25Z" finished-at="2017-04-29T10:25:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_001_Verify_That_UserCan_sent_query_on_ContactUs_Page()[pri:0, instance:shopizer.PageSteps.ContactPageTest@5fbe4146]" name="TC_001_Verify_That_UserCan_sent_query_on_ContactUs_Page" duration-ms="51266" started-at="2017-04-29T10:25:45Z" finished-at="2017-04-29T10:26:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_001_Verify_That_UserCan_sent_query_on_ContactUs_Page -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.ContactPageTest@5fbe4146]" name="closeBrowser" is-config="true" duration-ms="5158" started-at="2017-04-29T10:26:37Z" finished-at="2017-04-29T10:26:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shopizer.PageSteps.ContactPageTest -->
+    </test> <!-- ContactPageTestPageAllTestCases -->
+    <test name="OrderReviewTest" duration-ms="158179" started-at="2017-04-29T08:26:42Z" finished-at="2017-04-29T08:29:20Z">
+      <class name="shopizer.PageSteps.OrderReviewTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="setUp" is-config="true" duration-ms="20261" started-at="2017-04-29T10:26:42Z" finished-at="2017-04-29T10:27:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_01_Verify_that_item_added_to_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="TC_01_Verify_that_item_added_to_cart" duration-ms="37763" started-at="2017-04-29T10:27:02Z" finished-at="2017-04-29T10:27:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Node Web Development]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01_Verify_that_item_added_to_cart -->
+        <test-method status="FAIL" signature="TC_02_VerifyThat_Item_is_removed_from_cart(java.lang.String)[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="TC_02_VerifyThat_Item_is_removed_from_cart" duration-ms="99963" started-at="2017-04-29T10:27:40Z" finished-at="2017-04-29T10:29:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Node Web Development]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.Throwable">
             <message>
-              <![CDATA[Multiple failures (4):nnFailure 1 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: VideosLink6 (tried for 10 second(s) with 500 MILLISECONDS interval)
+              <![CDATA[Multiple failures (2):nnFailure 1 of 2:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id="miniCartDetails"]/li/h4 (tried for 40 second(s) with 500 MILLISECONDS interval)
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:621)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:430)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
+	at shopizer.seleniumCommonFunctions.SeleniumCommon.getElement(SeleniumCommon.java:100)
+	at shopizer.PageObjects.OrderReviewPage.openCartAndverifyRemoveItem(OrderReviewPage.java:94)
+	at shopizer.PageSteps.OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(OrderReviewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,115 +393,17 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"VideosLink6"}
-  (Session info: chrome=57.0.2987.110)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id="miniCartDetails"]/li/h4"}
+  (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.11 seconds
+Command duration or timeout: 30.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=id, value=VideosLink6}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	... 32 more
-nnFailure 2 of 4:njava.lang.NullPointerException
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:431)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-nnFailure 3 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: .//*[@id='Pavarotti'] (tried for 10 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:617)
-	at shopizer.businessFunctions.AppFunctions.playMovie(AppFunctions.java:221)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='Pavarotti']"}
-  (Session info: chrome=57.0.2987.110)
-  (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=xpath, value=.//*[@id='Pavarotti']}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
+*** Element info: {Using=xpath, value=.//*[@id="miniCartDetails"]/li/h4}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -176,26 +417,24 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
 	... 30 more
-nnFailure 4 of 4:njava.lang.NullPointerException]]>
+nnFailure 2 of 2:njava.lang.NullPointerException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Multiple failures (4):nnFailure 1 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: VideosLink6 (tried for 10 second(s) with 500 MILLISECONDS interval)
+              <![CDATA[java.lang.Throwable: Multiple failures (2):nnFailure 1 of 2:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id="miniCartDetails"]/li/h4 (tried for 40 second(s) with 500 MILLISECONDS interval)
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:621)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:430)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
+	at shopizer.seleniumCommonFunctions.SeleniumCommon.getElement(SeleniumCommon.java:100)
+	at shopizer.PageObjects.OrderReviewPage.openCartAndverifyRemoveItem(OrderReviewPage.java:94)
+	at shopizer.PageSteps.OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(OrderReviewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -223,115 +462,17 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"VideosLink6"}
-  (Session info: chrome=57.0.2987.110)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id="miniCartDetails"]/li/h4"}
+  (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.11 seconds
+Command duration or timeout: 30.08 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
+System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=id, value=VideosLink6}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	... 32 more
-nnFailure 2 of 4:njava.lang.NullPointerException
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.clickOnElement(SeleniumCommon.java:431)
-	at shopizer.businessFunctions.AppFunctions.selectMenu(AppFunctions.java:98)
-	at shopizer.PageObjects.VideoPage.selectMenu(VideoPage.java:38)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:36)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-nnFailure 3 of 4:norg.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: .//*[@id='Pavarotti'] (tried for 10 second(s) with 500 MILLISECONDS interval)
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
-	at shopizer.seleniumCommonFunctions.SeleniumCommon.getPresentElement(SeleniumCommon.java:617)
-	at shopizer.businessFunctions.AppFunctions.playMovie(AppFunctions.java:221)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:38)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:696)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:882)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1189)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:281)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:121)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='Pavarotti']"}
-  (Session info: chrome=57.0.2987.110)
-  (Driver info: chromedriver=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320),platform=Linux 4.4.0-21-generic x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
-System info: host: 'amir-HP-Pavilion-15-Notebook-PC', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-21-generic', java.version: '1.8.0_121'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.zfpH5Y}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=57.0.2987.110, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
-*** Element info: {Using=xpath, value=.//*[@id='Pavarotti']}
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440175 (9bc1d90b8bfa4dd181fbbf769a5eb5e575574320), userDataDir=/tmp/.org.chromium.Chromium.Mj5C89}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6f512e00b99c53a935a5c5ae8ddd3fa9
+*** Element info: {Using=xpath, value=.//*[@id="miniCartDetails"]/li/h4}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -345,13 +486,13 @@ Session ID: 5c55d5c24740a7b5a2f8d790d2384bc0
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
 	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
 	... 30 more
-nnFailure 4 of 4:njava.lang.NullPointerException
-	at shopizer.businessFunctions.AppFunctions.playMovie(AppFunctions.java:224)
-	at shopizer.PageSteps.VideoPageTest.TC_001_verify_video_streaming(VideoPageTest.java:38)
+nnFailure 2 of 2:njava.lang.NullPointerException
+	at shopizer.PageObjects.OrderReviewPage.openCartAndverifyRemoveItem(OrderReviewPage.java:94)
+	at shopizer.PageSteps.OrderReviewTest.TC_02_VerifyThat_Item_is_removed_from_cart(OrderReviewTest.java:85)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -384,8 +525,24 @@ nnFailure 4 of 4:njava.lang.NullPointerException
           </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- TC_02_VerifyThat_Item_is_removed_from_cart -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:shopizer.PageSteps.OrderReviewTest@4961f6af]" name="closeBrowser" is-config="true" duration-ms="181" started-at="2017-04-29T10:29:20Z" finished-at="2017-04-29T10:29:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- shopizer.PageSteps.OrderReviewTest -->
+    </test> <!-- OrderReviewTest -->
+    <test name="VideoStreaming" duration-ms="50420" started-at="2017-04-29T08:29:20Z" finished-at="2017-04-29T08:30:10Z">
+      <class name="shopizer.PageSteps.VideoPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:shopizer.PageSteps.VideoPageTest@6a2f6f80]" name="setUp" is-config="true" duration-ms="6509" started-at="2017-04-29T10:29:20Z" finished-at="2017-04-29T10:29:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="TC_001_verify_video_streaming()[pri:0, instance:shopizer.PageSteps.VideoPageTest@6a2f6f80]" name="TC_001_verify_video_streaming" duration-ms="43733" started-at="2017-04-29T10:29:27Z" finished-at="2017-04-29T10:30:10Z">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- TC_001_verify_video_streaming -->
-        <test-method status="PASS" signature="closeBrowserName()[pri:0, instance:shopizer.PageSteps.VideoPageTest@5f2050f6]" name="closeBrowserName" is-config="true" duration-ms="199" started-at="2017-03-28T20:43:31Z" finished-at="2017-03-28T20:43:32Z">
+        <test-method status="PASS" signature="closeBrowserName()[pri:0, instance:shopizer.PageSteps.VideoPageTest@6a2f6f80]" name="closeBrowserName" is-config="true" duration-ms="176" started-at="2017-04-29T10:30:10Z" finished-at="2017-04-29T10:30:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowserName -->

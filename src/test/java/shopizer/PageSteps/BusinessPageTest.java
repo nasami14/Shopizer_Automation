@@ -19,8 +19,6 @@ import shopizer.utility.ExceptionHandler;
 
 public class BusinessPageTest {
 
-	
-	
 	SeleniumCommon selenium;
 	Config config;
 
@@ -156,6 +154,7 @@ public class BusinessPageTest {
 				{
 					e.printStackTrace();
 					ExceptionHandler.addVerificationFailure(e);
+					Assert.fail("fail to procees item order");
 				}	
 				}
 				
@@ -172,6 +171,7 @@ public class BusinessPageTest {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
 							ExceptionHandler.addVerificationFailure(e);
+							Assert.fail("failed toverify publisher link");
 						}
 						
 					}

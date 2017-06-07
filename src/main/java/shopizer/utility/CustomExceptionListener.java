@@ -12,7 +12,6 @@ import org.testng.internal.Utils;
  * A listener that gets invoked before and after a method is invoked by TestNG. This listener will only be invoked for
  * configuration and test methods. It implements {@link IInvokedMethodListener}.
  * 
- * @author narendra , JAN 2 , 2014
  */
 public class CustomExceptionListener implements IInvokedMethodListener
 {

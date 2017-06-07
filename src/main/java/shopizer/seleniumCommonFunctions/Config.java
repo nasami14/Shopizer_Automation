@@ -44,10 +44,14 @@ public class Config {
 
 	private String sScreenshotFilePath;
 	
+	//constructor
 	private Config() 
 	{
 		readConfig();
 	}
+	/**
+	 * This method will be use to read properties from config.properties file
+	 */
 	public void readConfig()
 	{
 		log.info(" Reading the config properties .......");
@@ -74,7 +78,7 @@ public class Config {
 			sDefaultUserName=props.getProperty("defaultUserName");
 			sDefaultPassword=props.getProperty("defaultPassword");
 			sBusinessBooksPageObjectFile=props.getProperty("objectRepoName.BusinessBooksPage");
-			sTestDataFilePath=props.getProperty("testData.Path");
+			sTestDataFilePath=System.getProperty("user.dir")+props.getProperty("testData.Path");
 			sScreenshotFilePath=props.getProperty("screenshot.path");
 			
 			
@@ -165,7 +169,10 @@ public class Config {
 	}
 	
 	
-
+public static void main8(String[] args) {
+	
+	System.out.println(Config.getInstance().getTestDataFilePath());
+}
 	
 	
 

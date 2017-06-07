@@ -4,9 +4,11 @@ shopizer/PageSteps/RegistrationTest.class
 shopizer/PageSteps/LoginSteps.class
 shopizer/PageObjects/ComputerBooksPage.class
 shopizer/PageObjects/OrderCheckoutPage.class
+shopizer/PageSteps/VideoPageTest.class
 shopizer/PageObjects/OrderReviewPage.class
 shopizer/PageSteps/ComputerBooksPageTest.class
 shopizer/PageSteps/OrderReviewTest.class
+shopizer/PageObjects/VideoPage.class
 shopizer/PageObjects/ProductInfoPage.class
 shopizer/PageObjects/RegistrationPage.class
 shopizer/PageObjects/OrderConfirmationPage.class

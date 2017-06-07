@@ -45,7 +45,7 @@ public class RegistrationTest {
 	public Iterator<Object[]> getInputData()
 	{
 		ArrayList<Object[]> objectList= new ArrayList<>();
-		Object[]arrValues={"Gill","Sing","Male","United States","Iowa","gill16","amir@abc.com","gill16"};
+		Object[]arrValues={"Amir","Naseri","Male","United States","Iowa","nasami14","amir@abc.com","nasami14"};
 		
 		objectList.add(arrValues);
 		//objectList.add(arrValues2);

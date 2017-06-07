@@ -1,6 +1,7 @@
 shopizer/utility/ReadPropertyFile.class
 shopizer/utility/ExceptionHandler.class
 shopizer/utility/Excel_Reader.class
+shopizer/utility/CustomExceptionListener.class
 shopizer/utility/Utility.class
 shopizer/seleniumCommonFunctions/WebDriverInit.class
 shopizer/seleniumCommonFunctions/Config.class

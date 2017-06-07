@@ -17,6 +17,7 @@ public class WebDriverInit {
 	Config config;
 	
 	Logger log= Logger.getLogger(WebDriverInit.class);
+	//constructor 
 	public WebDriverInit()
 	{
 		config=Config.getInstance();
